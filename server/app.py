@@ -27,7 +27,14 @@ app = FastAPI(title="NoShitAI API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "http://localhost:3001",
+        "https://noshitai.com",
+        "https://www.noshitai.com",
+        "https://noshitai.netlify.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
