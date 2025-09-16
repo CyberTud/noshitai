@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react'
-import axios from 'axios'
+import axios from '../services/axios'
 import toast from 'react-hot-toast'
 
 const AuthContext = createContext({})
@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     if (token) {
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+      // Token is already handled by axios interceptor
       fetchUser()
     }
     setLoading(false)
@@ -59,7 +59,7 @@ export const AuthProvider = ({ children }) => {
       const { access_token } = response.data
       localStorage.setItem('token', access_token)
       setToken(access_token)
-      axios.defaults.headers.common['Authorization'] = `Bearer ${access_token}`
+      // Token will be picked up by axios interceptor on next request
       await fetchUser()
       toast.success('Login successful!')
       return true
@@ -73,7 +73,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('token')
     setToken(null)
     setUser(null)
-    delete axios.defaults.headers.common['Authorization']
+    // Token removal is handled by axios interceptor
     toast.success('Logged out successfully')
   }
 

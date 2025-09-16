@@ -1,5 +1,6 @@
 // API Configuration
-export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+export const API_URL = import.meta.env.VITE_API_URL || 'https://noshitai-2.onrender.com';
 
-// For production deployment, you'll need to set VITE_API_URL to your backend API endpoint
-// Either through Netlify environment variables or a .env.production file
+// For local development, create a .env file with:
+// VITE_API_URL=http://localhost:8000
+// For production, this uses the deployed backend on Render

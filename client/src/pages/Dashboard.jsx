@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useAuth } from '../contexts/AuthContext'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+import axios from '../services/axios'
 import {
   FileText,
   TrendingUp,

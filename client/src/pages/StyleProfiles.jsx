@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import axios from '../services/axios'
 import toast from 'react-hot-toast'
 import { Plus, Edit, Trash2, FileText, BarChart } from 'lucide-react'
 

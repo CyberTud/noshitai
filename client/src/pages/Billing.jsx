@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useAuth } from '../contexts/AuthContext'
-import axios from 'axios'
+import axios from '../services/axios'
 import toast from 'react-hot-toast'
 import {
   CreditCard,

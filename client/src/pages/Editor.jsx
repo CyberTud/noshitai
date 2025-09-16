@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import axios from '../services/axios'
 import { useDropzone } from 'react-dropzone'
 import toast from 'react-hot-toast'
 import { Link } from 'react-router-dom'
