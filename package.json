@@ -1,0 +1,15 @@
+{
+  "name": "noshitai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && python app.py",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "npm run server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
