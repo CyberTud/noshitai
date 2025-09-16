@@ -6,7 +6,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd server && python app.py",
     "client": "cd client && npm run dev",
-    "build": "cd client && npm run build",
+    "build": "cd client && npm install && npm run build",
     "start": "npm run server"
   },
   "devDependencies": {
